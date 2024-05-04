@@ -44,7 +44,13 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-             .
+             The perprtual disconnect between our nature and our digital lives spersists. 
+             As we spend increasing amounts of time indoors, 
+             agi learns our data to perpetuate further indoor activities. 
+             Consequently,individuals are reporting heightened levels of stress and loneliness due to prolonged indoor engagement. 
+             However, this represents only half of the issue;
+             there is a growing challenge in accessing nature.  
+             Climate awareness & consumer based artificial intelligence product cohesion remains largely absent from our digital experiences, hindering our ability to seamlessly integrate with the natural world. 
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link

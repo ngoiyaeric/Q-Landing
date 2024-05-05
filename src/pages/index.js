@@ -28,7 +28,7 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/2 lg:hidden md:inline-block md:w-full">
+            <div className="w-1/2 lg:hidden md:inline-block md:w-full mx-auto">
               <Image
                 src={profilePic}
                 alt=""

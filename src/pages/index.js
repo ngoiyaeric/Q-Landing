@@ -48,7 +48,7 @@ export default function Home() {
              As we spend increasing amounts of time indoors, 
              algorithms learn from our data and perpetuate further indoor activities. 
              This represents only half of the problem;
-             there is a growing challenge in accessing the nature,
+             there is a growing challenge in accessing nature,
              Climate action & consumer based artificial intelligent product cohesion remains largely absent from our digital experiences. 
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">

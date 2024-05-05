@@ -34,6 +34,7 @@ export default function Home() {
                 alt=""
                 className="h-auto w-3/4"
                 sizes="10vw"
+                quality={100}
                 priority
               />
             </div>

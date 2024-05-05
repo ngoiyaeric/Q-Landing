@@ -143,7 +143,7 @@ export default function Articles() {
               link="mailto:support@queue.cx"
             />
             <Article
-              title="Ecology & Environmental Expert"
+              title="Ecology & Environment Expert"
               date=""
               img={blog8}
               link="mailto:support@queue.cx"

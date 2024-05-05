@@ -46,9 +46,9 @@ export default function Home() {
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
              The perprtual disconnect between earth and our digital lives persists. 
              As we spend increasing amounts of time indoors, 
-             algorithms learns our data and perpetuate further indoor activities. 
+             algorithms learn from our data and perpetuate further indoor activities. 
              This represents only half of the problem;
-             there is a growing challenge in accessing the nature,
+             there is a growing challenge in accessing nature,
              Climate action & consumer based artificial intelligent product cohesion remains largely absent from our digital experiences. 
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
@@ -66,7 +66,7 @@ export default function Home() {
                   download
                 >
                 
-                Labs 
+                Labs  
                 <LinkArrow className="ml-1 !w-6 md:!w-4" />
                 </Link>
                 <Link

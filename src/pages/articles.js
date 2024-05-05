@@ -121,30 +121,30 @@ export default function Articles() {
             <Article
               title="IOS Engineer"
               img={blog3}
-              date="January 27, 2024"
+              date=""
               link="mailto:support@queue.cx"
             />
             <Article
               title="Web Developer"
               img={blog4}
-              date="January 30, 2024"
+              date=""
               link="mailto:support@queue.cx"
             />
             <Article
               title="Machine Learning Engineer"
               img={blog5}
-              date="January 29, 2024"
+              date=""
               link="mailto:support@queue.cx"
             />
             <Article
               title="Artficial Intelligence Researcher"
               img={blog6}
-              date="January 28, 2024"
+              date=""
               link="mailto:support@queue.cx"
             />
             <Article
               title="Ecology & Environmental Expert"
-              date="April 4, 2024"
+              date=""
               img={blog8}
               link="mailto:support@queue.cx"
             />

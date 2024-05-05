@@ -27,12 +27,12 @@ export default function Home() {
         className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
-          <div className="flex w-full items-start justify-between md:flex-col mx-auto">
+          <div className="flex w-full items-center justify-center md:flex-col mx-auto">
             <div className="w-1/2 lg:hidden md:inline-block md:w-full mx-auto">
               <Image
                 src={profilePic}
                 alt=""
-                className="h-auto w-3/4"
+                className="h-auto w-3/4 mx-auto"
                 sizes="10vw"
                 quality={100}
                 priority

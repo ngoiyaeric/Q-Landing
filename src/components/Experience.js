@@ -61,48 +61,48 @@ const Experience = () => {
             style={{ scaleY: scrollYProgress }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            <Details
-              position=""
+          <Details
+              position="Artificial intelligent voice personal assitant"
               company=""
               companyLink=""
               time=""
-              address=""
+              address="We've crafted a soothing voice interface for our artificial intelligence platform where we plan to add onto its capabilities to improve quality computer experiences."
               work=""
             />
 
             <Details
-              position=""
+              position="Real time Maps & location intelligence"
               company=""
               companyLink=""
               time=""
-              address=""
+              address="Q has access to the world’s most accurate maps and location intelligence, with an earth centric approach, Q is aware of your locations air quality data, solar energy potential, EV charging stations as well as local businesses in your area. "
               work=""
             />
 
             <Details
-              position=""
-              company=""
+              position="Hands free navigation"
+              company=" "
               companyLink=""
               time=""
-              address=""
+              address="Q is able to navigate you anywhere you want completely hands free using spatial audio, it is able to understand your voice and navigate you to your destination."
               work=""
             />
 
             <Details
-              position=""
+              position="Immersive bioacoustics & Green OS"
               company=""
               companyLink=""
               time=""
-              address=""
+              address="Q crafts an immersive bioacoustics sphere around our artificial intelligence voice. Immersing you into nature while assisting you with your daily tasks. We have augmented digitally replenishing ecosystems through real world carbon capture technologies with digital interfaces. This allows us to improve user experience, reduce carbon footprint, and help the planet within our operating systems"
               work=""
             />
 
             <Details
-              position=""
+              position="Weather intelligence"
               company=""
               companyLink=""
               time=""
-              address=""
+              address="Q has accurate 10 day weather forecast and is able to recommend when its best to partake in outdoor activities while keeping our users safe."
               work=""
             />
           </ul>

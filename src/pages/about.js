@@ -47,26 +47,40 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="The Queue App"
+            text="mobile"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
+
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
             md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                BIOGRAPHY
+               Offline capabilities. 
               </h2>
               <p className="font-medium ">
-               Quality Computer Experiences.
+               Immersive bioacoustics and spatial navigation for mobile devices.
               </p>
               <p className="my-4 font-medium">
-                Immersive
+                Offline language models finetuned for earth. 
+              </p>
+              
+              <p className="font-medium gap-16 sm:gap-8 ">
+                Offline maps & route planning 
+              </p>
+
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                Online capabilities.
+              </h2>
+
+              <p className="font-medium ">
+                Weather Intelligence
               </p>
               <p className="font-medium">
-                Contextual
+                Search & Discovery
               </p>
             </div>
+            
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
             bg-light p-8 dark:border-light dark:bg-dark
             xl:col-span-4 md:col-span-8 md:order-1
@@ -77,12 +91,12 @@ export default function About() {
         dark:bg-light  "
               />
               <Image
-                className="h-auto w-full rounded-2xl"
+                className="h-auto w-3/4 rounded-2xl"
                 src={profile}
                 alt="Codebucks"
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                sizes="(max-width: 500px) 70vw,
+              (max-width: 1000px) 30vw,
+              20vw"
                 priority
               />
             </div>
@@ -90,31 +104,11 @@ export default function About() {
             xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={40} />+
+                  <AnimatedNumberFramerMotion value={5} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  satisfied clients
-                </h2>
-              </div>
-
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={50} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  projects completed
-                </h2>
-              </div>
-
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={4} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Experiences
+                  waitlist  
                 </h2>
               </div>
             </div>

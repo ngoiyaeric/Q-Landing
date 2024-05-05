@@ -32,7 +32,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt=""
-                className="h-auto w-full"
+                className="h-auto w-3/4"
                 sizes="10vw"
                 priority
               />
@@ -44,13 +44,12 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-             The perprtual disconnect between our nature and our digital lives spersists. 
+             The perprtual disconnect between earth and our digital lives persists. 
              As we spend increasing amounts of time indoors, 
-             agi learns our data to perpetuate further indoor activities. 
-             Consequently,individuals are reporting heightened levels of stress and loneliness due to prolonged indoor engagement. 
-             However, this represents only half of the issue;
-             there is a growing challenge in accessing nature.  
-             Climate awareness & consumer based artificial intelligence product cohesion remains largely absent from our digital experiences, hindering our ability to seamlessly integrate with the natural world. 
+             algorithms learns our data and perpetuate further indoor activities. 
+             This represents only half of the problem;
+             there is a growing challenge in accessing the nature,
+             Climate action & consumer based artificial intelligent product cohesion remains largely absent from our digital experiences. 
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
@@ -77,6 +76,25 @@ export default function Home() {
                 >
                  
                 </Link>
+                <Link
+    href="https://forms.gle/vCcRPenxRFUM8Bue8" // Replace with the desired URL
+    target={"https://forms.gle/vCcRPenxRFUM8Bue8"} // Remove this line if you don't want to open in a new tab
+    className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+      capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+      dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+      md:p-2 md:px-4 md:text-base ml-4 // Add some left margin to separate it from the "Labs" button
+    `}
+  >
+    Waitlist
+    <LinkArrow className="ml-1 !w-6 md:!w-4" />
+  </Link>
+
+  <Link
+    href="https://forms.gle/vCcRPenxRFUM8Bue8"
+    className="ml-4 text-lg font-medium capitalize text-dark underline 
+    dark:text-light md:text-base"
+  >
+  </Link>
               </div>
             </div>
           </div>

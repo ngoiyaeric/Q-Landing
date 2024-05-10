@@ -58,9 +58,7 @@ export default function About() {
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                Offline capabilities. 
               </h2>
-              <p className="font-medium ">
-               Immersive bioacoustics and spatial navigation for mobile devices.
-              </p>
+             
               <p className="my-4 font-medium">
                 Offline language models finetuned for earth. 
               </p>
@@ -78,6 +76,9 @@ export default function About() {
               </p>
               <p className="font-medium">
                 Search & Discovery
+              </p>
+               <p className="font-medium ">
+                Green OS
               </p>
             </div>
             

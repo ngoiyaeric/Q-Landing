@@ -80,6 +80,10 @@ export default function About() {
                <p className="font-medium ">
                 Green OS
               </p>
+               <p className="font-medium ">
+                AI Assistant (Q)
+              </p>
+              
             </div>
             
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 

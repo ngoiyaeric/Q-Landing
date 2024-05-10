@@ -72,7 +72,7 @@ export default function About() {
               </h2>
 
               <p className="font-medium ">
-                Weather Intelligence
+                Earth Intelligence
               </p>
               <p className="font-medium">
                 Search & Discovery
@@ -81,7 +81,7 @@ export default function About() {
                 Green OS
               </p>
                <p className="font-medium ">
-                AI Assistant (Q)
+               (Q) Artificial intelligence Assistant 
               </p>
               
             </div>

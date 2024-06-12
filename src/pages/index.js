@@ -67,7 +67,7 @@ export default function Home() {
                   download
                 >
                 
-                Labs  
+                Lab  
                 <LinkArrow className="ml-1 !w-6 md:!w-4" />
                 </Link>
                 <Link

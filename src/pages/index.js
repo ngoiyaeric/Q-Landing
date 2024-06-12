@@ -103,11 +103,13 @@ export default function Home() {
 
         <HireMe />
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
-          <Image
-            className="relative h-auto w-full"
-            src={lightBulb}
-            alt=""
-          />
+         /* 
+        <Image
+        className="relative h-auto w-full"
+        src={lightBulb}
+        alt=""
+        />
+        */
         </div>
       </article>
     </>

@@ -56,15 +56,15 @@ export default function About() {
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
             md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-               Offline capabilities. 
+               On device capabilities. 
               </h2>
              
               <p className="my-4 font-medium">
-                Offline language models finetuned for earth. 
+                On device language models finetuned for earth. 
               </p>
               
               <p className="font-medium gap-16 sm:gap-8 ">
-                Offline maps & route planning 
+                On device maps & route planning 
               </p>
 
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
@@ -81,7 +81,7 @@ export default function About() {
                 Green OS
               </p>
                <p className="font-medium ">
-               (Q) Artificial intelligence Assistant 
+               (Q) Artificial intelligence Agent 
               </p>
               
             </div>

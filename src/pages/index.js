@@ -46,12 +46,7 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-             The perpetual disconnect between earth and our digital lives persists. 
-             As we spend increasing amounts of time indoors, 
-             algorithms learn from our data and perpetuate further indoor activities. 
-             This represents only half of the problem;
-             there is a growing challenge in accessing nature,
-             Climate action & consumer based artificial intelligent product cohesion remains largely absent from our digital experiences. 
+               Bring nature into your digital world. Join the future. Get on the waitlist now!
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
@@ -79,8 +74,8 @@ export default function Home() {
                  
                 </Link>
                 <Link
-    href="https://forms.gle/vCcRPenxRFUM8Bue8" // Replace with the desired URL
-    target={"https://forms.gle/vCcRPenxRFUM8Bue8"} // Remove this line if you don't want to open in a new tab
+    href="https://tally.so/r/3E0z94" // Replace with the desired URL
+    target={"https://tally.so/r/3E0z94"} // Remove this line if you don't want to open in a new tab
     className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
       capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
       dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light

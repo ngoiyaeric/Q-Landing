@@ -1,13 +1,3 @@
-To address the issues in your `Navbar` component, follow these steps:
-
-1. **Use `<Link />` from `next/link` for navigation instead of `<a>`:**
-   Update the `<a>` element to use Next.js's `<Link />` component. 
-
-2. **Replace `<img>` with `<Image />` from `next/image`:**
-   This provides automatic optimization for images. Additionally, make sure all images have an `alt` attribute for accessibility.
-
-Here’s how to update your code:
-
 ```jsx
 import Link from "next/link";
 import Image from "next/image";

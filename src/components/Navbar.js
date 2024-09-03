@@ -1,4 +1,16 @@
+To address the issues in your `Navbar` component, follow these steps:
+
+1. **Use `<Link />` from `next/link` for navigation instead of `<a>`:**
+   Update the `<a>` element to use Next.js's `<Link />` component. 
+
+2. **Replace `<img>` with `<Image />` from `next/image`:**
+   This provides automatic optimization for images. Additionally, make sure all images have an `alt` attribute for accessibility.
+
+Here’s how to update your code:
+
+```jsx
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import {
@@ -17,13 +29,13 @@ const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
 
   return (
-    <Link href={href} className={`${className}  rounded relative group lg:text-light lg:dark:text-dark`}>
+    <Link href={href} className={`${className} rounded relative group lg:text-light lg:dark:text-dark`}>
       {title}
       <span
         className={`
-              inline-block h-[1px]  bg-dark absolute left-0 -bottom-0.5 
+              inline-block h-[1px] bg-dark absolute left-0 -bottom-0.5 
               group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              ${router.asPath === href ? "w-full" : " w-0"} lg:bg-light lg:dark:bg-dark
+              ${router.asPath === href ? "w-full" : "w-0"} lg:bg-light lg:dark:bg-dark
               `}
       >
         &nbsp;
@@ -35,19 +47,22 @@ const CustomLink = ({ href, title, className = "" }) => {
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   const router = useRouter();
 
-  const handleClick = () =>{
+  const handleClick = () => {
     toggle();
-    router.push(href) 
-  }
+    router.push(href);
+  };
 
   return (
-    <button className={`${className}  rounded relative group lg:text-light lg:dark:text-dark`} onClick={handleClick}>
+    <button
+      className={`${className} rounded relative group lg:text-light lg:dark:text-dark`}
+      onClick={handleClick}
+    >
       {title}
       <span
         className={`
-              inline-block h-[1px]  bg-dark absolute left-0 -bottom-0.5 
+              inline-block h-[1px] bg-dark absolute left-0 -bottom-0.5 
               group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              ${router.asPath === href ? "w-full" : " w-0"} lg:bg-light lg:dark:bg-dark
+              ${router.asPath === href ? "w-full" : "w-0"} lg:bg-light lg:dark:bg-dark
               `}
       >
         &nbsp;
@@ -56,26 +71,19 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   );
 };
 
-
-
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitch();
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
-
-
   return (
-    <header className="w-full flex items-center justify-between px-32 py-8 font-medium z-10 dark:text-light
-    lg:px-16 relative z-1 md:px-12 sm:px-8
-    ">
-      
+    <header className="w-full flex items-center justify-between px-32 py-8 font-medium z-10 dark:text-light lg:px-16 relative z-1 md:px-12 sm:px-8">
       <button
         type="button"
-        className=" flex-col items-center justify-center hidden lg:flex"
+        className="flex-col items-center justify-center hidden lg:flex"
         aria-controls="mobile-menu"
         aria-expanded={isOpen}
         onClick={handleClick}
@@ -86,140 +94,117 @@ const Navbar = () => {
         <span className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
       </button>
 
-      <div className="w-full flex justify-between items-center lg:hidden"
-      >
-      <nav className="flex items-center justify-center">
-        <CustomLink className="mr-4" href="/about" title="About" />
-        <CustomLink className="mx-4" href="/404" title="Technologies" />
-        <CustomLink className="ml-4" href="/careers" title="Careers" />
-      </nav>
-      <nav
-        className="flex items-center justify-center flex-wrap lg:mt-2
-      "
-      >
-        <motion.a
-          target={"https://twitter.com/Queue_cx"}
-          className="w-6 mr-3"
-          href="https://twitter.com/Queue_cx"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label=""
-        >
-          <XIcon />
-        </motion.a>
-        <motion.a
-          target={"https://github.com/QueueLab/"}
-          className="w-6 mx-3"
-          href="https://github.com/QueueLab/"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label=""
-        >
-          <GithubIcon />
-        </motion.a>
-        <motion.a
-          target={"https://www.linkedin.com/company/queue-enterprise/"}
-          className="w-6 mx-3"
-          href="https://www.linkedin.com/company/queue-enterprise/"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="linkedin profile"
-        >
-          <LinkedInIcon />
-        </motion.a>
-        
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <SunIcon className={"fill-dark"} />
-          ) : (
-            <MoonIcon className={"fill-dark"} />
-          )}
-        </button>
-      </nav>
+      <div className="w-full flex justify-between items-center lg:hidden">
+        <nav className="flex items-center justify-center">
+          <CustomLink className="mr-4" href="/about" title="About" />
+          <CustomLink className="mx-4" href="/404" title="Technologies" />
+          <CustomLink className="ml-4" href="/careers" title="Careers" />
+        </nav>
+        <nav className="flex items-center justify-center flex-wrap lg:mt-2">
+          <motion.a
+            target={"https://twitter.com/Queue_cx"}
+            className="w-6 mr-3"
+            href="https://twitter.com/Queue_cx"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="X profile"
+          >
+            <XIcon />
+          </motion.a>
+          <motion.a
+            target={"https://github.com/QueueLab/"}
+            className="w-6 mx-3"
+            href="https://github.com/QueueLab/"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Github profile"
+          >
+            <GithubIcon />
+          </motion.a>
+          <motion.a
+            target={"https://www.linkedin.com/company/queue-enterprise/"}
+            className="w-6 mx-3"
+            href="https://www.linkedin.com/company/queue-enterprise/"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="LinkedIn profile"
+          >
+            <LinkedInIcon />
+          </motion.a>
+          <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1  
+              ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+              `}
+            aria-label="theme-switcher"
+          >
+            {mode === "light" ? (
+              <SunIcon className={"fill-dark"} />
+            ) : (
+              <MoonIcon className={"fill-dark"} />
+            )}
+          </button>
+        </nav>
       </div>
-    {
-      isOpen ? 
 
-      <motion.div className="min-w-[70vw] sm:min-w-[90vw] flex justify-between items-center flex-col fixed top-1/2 left-1/2 -translate-x-1/2
-      -translate-y-1/2
-      py-32 bg-dark/90 dark:bg-light/75 rounded-lg z-50 backdrop-blur-md
-      "
-      initial={{scale:0,x:"-50%",y:"-50%", opacity:0}}
-      animate={{scale:1,opacity:1}}
-      >
-      <nav className="flex items-center justify-center flex-col">
-        <CustomMobileLink toggle={handleClick} className="mr-4 lg:m-0 lg:my-2" href="/" title="About" />
-        <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/about" title="Technologies" />
-        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/careers" title="Careers" />
-      </nav>
-      <nav
-        className="flex items-center justify-center  mt-2"
-      >
-        <motion.a
-          target={"https://twitter.com/Queue_cx"}
-          className="w-6 m-1 mr-3 sm:mx-1"
-          href="https://twitter.com/Queue_cx"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="X profile"
+      {isOpen && (
+        <motion.div
+          className="min-w-[70vw] sm:min-w-[90vw] flex justify-between items-center flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-32 bg-dark/90 dark:bg-light/75 rounded-lg z-50 backdrop-blur-md"
+          initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
         >
-          <XIcon />
-        </motion.a>
-        <motion.a
-          target={"https://github.com/QueueLab/"}
-          className="w-6 m-1 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
-          href="https://github.com/QueueLab/"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my github profile"
-        >
-          <GithubIcon />
-        </motion.a>
-        <motion.a
-          target={"https://www.linkedin.com/company/queue-enterprises/"}
-          className="w-6 m-1 mx-3 sm:mx-1"
-          href="https://www.linkedin.com/company/queue-enterprises/"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          aria-label="linkedin profile"
-        >
-          <LinkedInIcon />
-        </motion.a>
+          <nav className="flex items-center justify-center flex-col">
+            <CustomMobileLink toggle={handleClick} className="mr-4 lg:m-0 lg:my-2" href="/" title="Home" />
+            <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/about" title="About" />
+            <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/careers" title="Careers" />
+          </nav>
+          <nav className="flex items-center justify-center mt-2">
+            <motion.a
+              target={"https://twitter.com/Queue_cx"}
+              className="w-6 m-1 mr-3 sm:mx-1"
+              href="https://twitter.com/Queue_cx"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label="X profile"
+            >
+              <XIcon />
+            </motion.a>
+            <motion.a
+              target={"https://github.com/QueueLab/"}
+              className="w-6 m-1 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
+              href="https://github.com/QueueLab/"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label="Github profile"
+            >
+              <GithubIcon />
+            </motion.a>
+            <motion.a
+              target={"https://www.linkedin.com/company/queue-enterprises/"}
+              className="w-6 m-1 mx-3 sm:mx-1"
+              href="https://www.linkedin.com/company/queue-enterprises/"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label="LinkedIn profile"
+            >
+              <LinkedInIcon />
+            </motion.a>
+            <button
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              className={`w-6 h-6 ease m-1 ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1  
+                ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+                `}
+              aria-label="theme-switcher"
+            >
+              {mode === "light" ? (
+                <SunIcon className={"fill-dark"} />
+              ) : (
+                <MoonIcon className={"fill-dark"} />
+              )}
+            </button>
+          </nav>
+        </motion.div>
+      )}
 
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-6 h-6 ease m-1 ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <SunIcon className={"fill-dark"} />
-          ) : (
-            <MoonIcon className={"fill-dark"} />
-          )}
-        </button>
-      </nav>
-      </motion.div>
-
-      : null
-    }
-
-    <div className="absolute left-[50%] translate-x-[-50%]">
-      <div className="flex justify-center items-center border-2 rounded-full p-1">
-        <a href="/">
-          <img src="./images/svgs/bw-logo.svg" className="h-10 w-10 rounded-full" />
-        </a>
-      </div>
-    </div>
-    </header>
-  );
-};
-
-export default Navbar;
+      <div className="absolute left-[50%] translate-x-[-50%]">
+        <div className="flex justify-center

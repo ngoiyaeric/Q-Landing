@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
   DribbbleIcon,
@@ -9,7 +8,7 @@ import {
   MoonIcon,
   PinterestIcon,
   SunIcon,
-  TwitterIcon,
+  XIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
 import { useThemeSwitch } from "./Hooks/useThemeSwitch";
@@ -90,10 +89,9 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center lg:hidden"
       >
       <nav className="flex items-center justify-center">
-        <CustomLink className="mr-4" href="/index" title="About" />
-        <CustomLink className="mx-4" href="/about" title="Technologies" />
-    
-        <CustomLink className="ml-4" href="/articles" title="Careers" />
+        <CustomLink className="mr-4" href="/about" title="About" />
+        <CustomLink className="mx-4" href="/404" title="Technologies" />
+        <CustomLink className="ml-4" href="/careers" title="Careers" />
       </nav>
       <nav
         className="flex items-center justify-center flex-wrap lg:mt-2
@@ -107,7 +105,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.9 }}
           aria-label=""
         >
-          <TwitterIcon />
+          <XIcon />
         </motion.a>
         <motion.a
           target={"https://github.com/QueueLab/"}
@@ -158,11 +156,10 @@ const Navbar = () => {
       <nav className="flex items-center justify-center flex-col">
         <CustomMobileLink toggle={handleClick} className="mr-4 lg:m-0 lg:my-2" href="/" title="About" />
         <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/about" title="Technologies" />
-        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/articles" title="Careers" />
+        <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/careers" title="Careers" />
       </nav>
       <nav
-        className="flex items-center justify-center  mt-2
-      "
+        className="flex items-center justify-center  mt-2"
       >
         <motion.a
           target={"https://twitter.com/Queue_cx"}
@@ -170,9 +167,9 @@ const Navbar = () => {
           href="https://twitter.com/Queue_cx"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="twitter profile"
+          aria-label="X profile"
         >
-          <TwitterIcon />
+          <XIcon />
         </motion.a>
         <motion.a
           target={"https://github.com/QueueLab/"}
@@ -214,9 +211,13 @@ const Navbar = () => {
       : null
     }
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
-        <Logo />
+    <div className="absolute left-[50%] translate-x-[-50%]">
+      <div className="flex justify-center items-center border-2 rounded-full p-1">
+        <a href="/">
+          <img src="./images/svgs/bw-logo.svg" className="h-10 w-10 rounded-full" />
+        </a>
       </div>
+    </div>
     </header>
   );
 };

@@ -5,8 +5,8 @@ import profile from "../../public/images/profile/developer-pic-2.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
+import Customer from "@/components/Customer";
+import Enterprise from "@/components/Enterprise";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -56,15 +56,15 @@ export default function About() {
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
             md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-               On device capabilities. 
+               Offline capabilities. 
               </h2>
              
               <p className="my-4 font-medium">
-                On device language models finetuned for earth. 
+                Offline language models finetuned for earth. 
               </p>
               
               <p className="font-medium gap-16 sm:gap-8 ">
-                On device maps & route planning 
+                Offline maps & route planning 
               </p>
 
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
@@ -81,7 +81,7 @@ export default function About() {
                 Green OS
               </p>
                <p className="font-medium ">
-               (Q) Artificial intelligence Agent 
+               (Q) Artificial intelligence Assistant 
               </p>
               
             </div>
@@ -114,8 +114,8 @@ export default function About() {
           </div>
 
           <Skills />
-          <Experience />
-          <Education />
+          <Customer />
+          <Enterprise />
         </Layout>
       </main>
     </>

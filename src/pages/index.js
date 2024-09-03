@@ -1,6 +1,5 @@
 
 import AnimatedText from "@/components/AnimatedText";
-import { HireMe } from "@/components/HireMe";
 import { LinkArrow } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Head from "next/head";
@@ -46,7 +45,7 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-               Bring nature into your digital world. Join the future. Get on the waitlist now!
+              Bring nature into your digital world. Join the future. Get on the waitlist now! 
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
@@ -67,7 +66,7 @@ export default function Home() {
                 <LinkArrow className="ml-1 !w-6 md:!w-4" />
                 </Link>
                 <Link
-                  href="labs.queue.cx"
+                  href="https://search.queue.cx"
                   className="ml-4 text-lg font-medium capitalize text-dark underline 
                   dark:text-light md:text-base"
                 >
@@ -97,7 +96,6 @@ export default function Home() {
           </div>
         </Layout>
 
-        <HireMe />
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
         <Image
         className="relative h-auto w-full"

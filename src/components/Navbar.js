@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Image from 'next/image';
 import {
   DribbbleIcon,
   GithubIcon,
@@ -214,7 +215,7 @@ const Navbar = () => {
     <div className="absolute left-[50%] translate-x-[-50%]">
       <div className="flex justify-center items-center border-2 rounded-full p-1">
         <a href="/">
-          <img src="./images/svgs/bw-logo.svg" className="h-10 w-10 rounded-full" />
+          <image src="./images/svgs/bw-logo.svg" className="h-10 w-10 rounded-full" />
         </a>
       </div>
     </div>

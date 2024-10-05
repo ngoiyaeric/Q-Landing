@@ -214,9 +214,9 @@ const Navbar = () => {
 
     <div className="absolute left-[50%] translate-x-[-50%]">
       <div className="flex justify-center items-center border-2 rounded-full p-1">
-        <a href="/">
+        <link href="/">
           <image src="./images/svgs/bw-logo.svg" className="h-10 w-10 rounded-full" />
-        </a>
+        </link>
       </div>
     </div>
     </header>
